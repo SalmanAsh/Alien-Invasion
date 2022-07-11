@@ -11,3 +11,6 @@ class Settings:
 
         # initial background colour
         self.bg_colour = (224, 238, 238)
+
+        # ship settings
+        self.ship_speed = 5
