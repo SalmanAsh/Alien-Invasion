@@ -9,6 +9,7 @@ class Alien(Sprite):
         """initialize the alien and set its current position"""
         super().__init__()
         self.screen = ai_game.screen
+        self.settings = ai_game.settings
 
         # load the alien image
         self.image = pygame.image.load("images/alien.png")
@@ -20,3 +21,8 @@ class Alien(Sprite):
 
         # store alien's exact horizonatal position
         self.x = float(self.rect.x)
+
+    def update(self):
+        """Move alien to the right"""
+        self.x += self.settings.alien_speed
+        self.rect.x = self.x
